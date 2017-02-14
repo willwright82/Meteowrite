@@ -5,13 +5,17 @@ class Header extends Component {
   render() {
     return (
       <nav className="nav navbar-default">
-        <div className="navbar-header">
-          <a className="navbar-brand" href="">Meteowrite</a>
+        <div className="container-fluid">
+          <div className="navbar-header">
+            <a className="navbar-brand" href="">Meteowrite</a>
+          </div>
+          <div className="navbar-right">
+            <ul className="nav navbar-nav">
+              <li><Accounts /></li>
+              <li><a href="">Create document</a></li>
+            </ul>
+          </div>
         </div>
-        <ul className="nav navbar-nav">
-          <li><Accounts /></li>
-          <li><a href="">Create document</a></li>
-        </ul>
       </nav>
     );
   }

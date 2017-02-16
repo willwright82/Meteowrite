@@ -1,7 +1,7 @@
 import { Mongo } from 'meteor/mongo';
 
 Meteor.methods({
-  'bins.insert': function () {
+  'bins.insert': function() {
     return Bins.insert({
       createdAt: new Date(),
       content: '',

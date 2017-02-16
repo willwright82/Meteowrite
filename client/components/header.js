@@ -4,6 +4,7 @@ import Accounts from './accounts';
 class Header extends Component {
   onBinClick(event) {
     event.preventDefault();
+
     Meteor.call('bins.insert');
   }
 

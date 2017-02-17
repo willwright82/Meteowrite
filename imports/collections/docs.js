@@ -8,6 +8,9 @@ Meteor.methods({
       sharedWith: [],
       ownerId: this.userId
     });
+  },
+  'docs.remove': function(doc) {
+    return Docs.remove(doc);
   }
 });
 

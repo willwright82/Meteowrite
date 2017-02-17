@@ -3,11 +3,20 @@ import { createContainer } from 'meteor/react-meteor-data';
 import { Docs } from '../../../imports/collections/docs';
 
 class DocsList extends Component {
+  onDocRemove(doc) {
+    Meteor.call('docs.remove', doc);
+  }
+
   renderList() {
     return this.props.docs.map(doc => {
       return (
         <li className="list-group-item" key={doc._id}>
           Document {doc._id}
+          <span className="pull-right">
+            <button onClick={() => this.onDocRemove(doc)} className="btn btn-danger">
+              Remove
+            </button>
+          </span>
         </li>
       );
     });

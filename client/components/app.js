@@ -7,7 +7,13 @@ export default () => {
   return (
     <div>
       <Header />
-      <DocsList />
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-xs-12">
+            <DocsList />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

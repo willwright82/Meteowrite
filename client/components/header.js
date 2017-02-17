@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import Accounts from './accounts';
 
 class Header extends Component {
-  onBinClick(event) {
+  onDocClick(event) {
     event.preventDefault();
 
-    Meteor.call('bins.insert');
+    Meteor.call('docs.insert');
   }
 
   render() {
@@ -18,7 +18,7 @@ class Header extends Component {
           <div className="navbar-right">
             <ul className="nav navbar-nav">
               <li className="dropdown"><Accounts /></li>
-              <li><a href="#" onClick={this.onBinClick.bind(this)}>Create document</a></li>
+              <li><a href="#" onClick={this.onDocClick.bind(this)}>Create document</a></li>
             </ul>
           </div>
         </div>

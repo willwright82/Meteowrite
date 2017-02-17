@@ -1,8 +1,8 @@
 import { Mongo } from 'meteor/mongo';
 
 Meteor.methods({
-  'bins.insert': function() {
-    return Bins.insert({
+  'docs.insert': function() {
+    return Docs.insert({
       createdAt: new Date(),
       content: '',
       sharedWith: [],
@@ -11,4 +11,4 @@ Meteor.methods({
   }
 });
 
-export const Bins = new Mongo.Collection('bins');
+export const Docs = new Mongo.Collection('docs');

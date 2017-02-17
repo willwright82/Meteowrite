@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
-import { Bins } from '../../../imports/collections/bins';
+import { Docs } from '../../../imports/collections/docs';
 
-class BinsList extends Component {
+class DocsList extends Component {
   renderList() {
-    return this.props.bins.map(bin => {
+    return this.props.docs.map(doc => {
       return (
-        <li className="list-group-item" key={bin._id}>
-          Document {bin._id}
+        <li className="list-group-item" key={doc._id}>
+          Document {doc._id}
         </li>
       );
     });
@@ -23,7 +23,7 @@ class BinsList extends Component {
 }
 
 export default createContainer(() => {
-  Meteor.subscribe('bins');
+  Meteor.subscribe('docs');
 
-  return { bins: Bins.find({}).fetch() };
-}, BinsList);
+  return { docs: Docs.find({}).fetch() };
+}, DocsList);

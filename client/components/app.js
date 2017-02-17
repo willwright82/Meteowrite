@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Header from './header';
-import BinsList from './bins/bins_list';
+import DocsList from './docs/docs_list';
 
 export default () => {
   return (
     <div>
       <Header />
-      <BinsList />
+      <DocsList />
     </div>
   );
 };

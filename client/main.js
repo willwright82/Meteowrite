@@ -10,6 +10,7 @@ import { Docs } from '../imports/collections/docs';
 const routes = (
   <Router history={browserHistory}>
     <Route path="/" component={App}>
+      <IndexRoute component={DocsList} />
       <Route path="docs" component={DocsMain} />
     </Route>
   </Router>

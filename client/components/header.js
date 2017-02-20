@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Accounts from './accounts';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 
 class Header extends Component {
   onDocClick(event) {
     event.preventDefault();
 
-    Meteor.call('docs.insert');
+    Meteor.call('docs.insert', (error, docId) => {
+      browserHistory.push(`/docs/${docId}`);
+    });
   }
 
   render() {

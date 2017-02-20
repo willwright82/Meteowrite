@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Accounts from './accounts';
+import { Link } from 'react-router';
 
 class Header extends Component {
   onDocClick(event) {
@@ -14,7 +15,7 @@ class Header extends Component {
         <div className="container-fluid">
           <div className="col-xs-12">
             <div className="navbar-header">
-              <a className="navbar-brand" href="">Meteowrite</a>
+              <Link to="/" className="navbar-brand">Meteowrite</Link>
             </div>
             <div className="navbar-right">
               <ul className="nav navbar-nav">

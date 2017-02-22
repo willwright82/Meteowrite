@@ -9,7 +9,7 @@ class DocsMain extends Component {
     //console.log(this.props.params.docId);
     if (!this.props.doc) {
       return(
-        <div className="col-sm-8">
+        <div className="col-sm-6">
           <h5>Loading...</h5>
         </div>
       );

@@ -6,9 +6,9 @@ class DocsViewer extends Component {
     const rawHTML = markdown.toHTML(this.props.doc.content);
 
     return (
-      <div className="col-sm-4">
+      <div className="col-sm-6">
         <h5>Output</h5>
-        {rawHTML}
+        <div dangerouslySetInnerHTML={{ __html: rawHTML }}></div>
       </div>
     );
   }

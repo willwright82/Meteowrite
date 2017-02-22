@@ -10,7 +10,7 @@ class DocsEditor extends Component {
 
   render() {
     return (
-      <div className="col-sm-8">
+      <div className="col-sm-6">
         <h5>Input</h5>
         <CodeMirror
           value={this.props.doc.content}

@@ -3,6 +3,7 @@ import { createContainer } from 'meteor/react-meteor-data';
 import { Docs } from '../../../imports/collections/docs';
 import DocsEditor from './docs_editor';
 import DocsViewer from './docs_viewer';
+import DocsShare from './docs_share';
 
 class DocsMain extends Component {
   render() {
@@ -18,6 +19,7 @@ class DocsMain extends Component {
       <div>
         <DocsEditor doc={this.props.doc} />
         <DocsViewer doc={this.props.doc} />
+        <DocsShare doc={this.props.doc} />
       </div>
     );
   }

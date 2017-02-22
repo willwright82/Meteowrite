@@ -6,6 +6,13 @@ import DocsEditor from './docs_editor';
 class DocsMain extends Component {
   render() {
     //console.log(this.props.params.docId);
+    if (!this.props.doc) {
+      return(
+        <div className="col-sm-8">
+          <h5>Loading...</h5>
+        </div>
+      );
+    }
     return (
       <div>
         <DocsEditor doc={this.props.doc} />

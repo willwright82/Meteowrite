@@ -9,8 +9,13 @@ Meteor.methods({
       ownerId: this.userId
     });
   },
+
   'docs.remove': function(doc) {
     return Docs.remove(doc);
+  },
+
+  'docs.update': function(doc, content) {
+    return Docs.update(doc._id, { $set: { content: content } });
   }
 });
 

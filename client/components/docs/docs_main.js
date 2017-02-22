@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import { Docs } from '../../../imports/collections/docs';
 import DocsEditor from './docs_editor';
+import DocsViewer from './docs_viewer';
 
 class DocsMain extends Component {
   render() {
@@ -16,6 +17,7 @@ class DocsMain extends Component {
     return (
       <div>
         <DocsEditor doc={this.props.doc} />
+        <DocsViewer doc={this.props.doc} />
       </div>
     );
   }

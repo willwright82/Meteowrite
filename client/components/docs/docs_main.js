@@ -19,7 +19,9 @@ class DocsMain extends Component {
       <div>
         <DocsEditor doc={this.props.doc} />
         <DocsViewer doc={this.props.doc} />
-        <DocsShare doc={this.props.doc} />
+        <div className="row">
+          <DocsShare doc={this.props.doc} />
+        </div>
       </div>
     );
   }

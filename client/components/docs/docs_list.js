@@ -37,6 +37,7 @@ class DocsList extends Component {
 
 export default createContainer(() => {
   Meteor.subscribe('docs');
+  Meteor.subscribe('sharedDocs');
 
   return { docs: Docs.find({}).fetch() };
 }, DocsList);

@@ -30,6 +30,7 @@ class DocsMain extends Component {
 export default createContainer((props) => {
   const { docId } = props.params;
   Meteor.subscribe('docs');
+  Meteor.subscribe('sharedDocs');
 
   return { doc: Docs.findOne(docId) };
 }, DocsMain);
